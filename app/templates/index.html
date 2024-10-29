@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Sentiment Analysis Tool</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('#analyzeForm').submit(function (e) {
+				e.preventDefault();  // Prevent default form submission
+				var inputData = $('#textInput').val();
+				$.ajax({
+					type: 'POST',
+					url: '/analyze',
+					data: { text: inputData },
+					success: function (response) {
+						$('#result').text('Sentiment: ' + response.result);  // Display the sentiment result
+					},
+					error: function (error) {
+						console.log(error);
+						$('#result').text('Error analyzing sentiment.');
+					}
+				});
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div class="container">
+		<h1>Sentiment Analysis Tool</h1>
+		<form id="analyzeForm">
+			<textarea id="textInput" name="text" rows="5" cols="33"
+				placeholder="Enter your text here..."></textarea>
+			<button type="submit">Analyze</button>
+		</form>
+		<p id="result"></p>
+	</div>
+</body>
+
+</html>
