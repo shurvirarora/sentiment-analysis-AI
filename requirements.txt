@@ -1,17 +1,66 @@
-# Core packages
+# Core libraries
+setuptools>=58.0.0
+wheel>=0.36.0
+Cython>=0.29.21
+
+# Essential packages with updated versions
+numpy>=1.21.0
+pandas>=1.1.5
+scikit-learn==1.3.2
+scipy==1.10.1
+
+# NLTK and Flask
+nltk==3.9.1
 Flask==1.1.2
 gunicorn==23.0.0
 
-# ML and NLP libraries
-scikit-learn==1.3.2
-nltk==3.9.1
+# Other dependencies
 joblib==1.3.2
+jupyterlab==4.0.5
+torch==2.2.2
+transformers==4.44.0
 
-# Optional: if you're using torch or transformers for deep learning models
-# Uncomment the following lines if necessary
-# torch==2.2.2
-# transformers==4.44.0
-
-# Utilities
-pandas==1.1.5
-numpy>=1.21.0
+# Additional packages
+absl-py==2.0.0
+anyio==3.7.1
+argon2-cffi==23.1.0
+beautifulsoup4==4.12.2
+certifi==2023.5.7
+charset-normalizer==3.2.0
+click==7.1.2
+Django==2.1.5
+entrypoints==0.4
+Flask-Session==0.3.1
+Flask-SocketIO==4.3.0
+fsspec==2024.6.1
+h5py==3.10.0
+huggingface-hub==0.24.5
+imbalanced-learn==0.12.4
+ipykernel==6.25.1
+ipython==8.12.2
+ipywidgets==8.1.0
+jupyter==1.0.0
+jupyter-console==6.6.3
+jupyter_client==7.4.9
+jupyter_core==5.3.1
+jupyter_server==2.7.2
+keras==2.13.1
+MarkupSafe==2.1.3
+mistune==3.0.1
+nbclient==0.8.0
+nbconvert==7.7.4
+notebook==7.0.2
+openai==1.41.1
+opt-einsum==3.3.0
+protobuf==4.25.1
+Pygments==2.16.1
+python-socketio==4.6.0
+requests==2.31.0
+SQLAlchemy==1.3.16
+tensorboard==2.13.0
+terminado==0.17.1
+threadpoolctl==3.2.0
+tornado==6.3.3
+tqdm==4.66.5
+widgetsnbextension==4.0.8
+zipp==3.16.2
